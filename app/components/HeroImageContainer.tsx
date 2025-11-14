@@ -33,16 +33,16 @@ export default function HeroImageContainer( { src, ...ImageProps } : HeroImagePr
 		})
 	}
 
-	const HandleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-		const i = event.target.id;
+	// const HandleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+	// 	const i = event.target.id;
 
-		if (i !== index) {
-			toggle_clicked(true);
+	// 	if (i !== index) {
+	// 		toggle_clicked(true);
 			
-			setTimeout(() => { set_index(i) }, animation_duration/2);
-			setTimeout(() => { toggle_clicked(false) }, animation_duration/2)
-		}
-	}
+	// 		setTimeout(() => { set_index(i) }, animation_duration/2);
+	// 		setTimeout(() => { toggle_clicked(false) }, animation_duration/2)
+	// 	}
+	// }
 
 	return (
 		<div>
@@ -58,7 +58,7 @@ export default function HeroImageContainer( { src, ...ImageProps } : HeroImagePr
 						id={i.toString()}
 						className={`${styles.hero_selector}`}
 						style={{ width: (0.20 * window.innerWidth)/(src.length) - 20 }}
-						onClick={(event) => HandleClick(event)}
+						// onClick={(event) => HandleClick(event)}
 					/>
 				)))}
 			</div>
